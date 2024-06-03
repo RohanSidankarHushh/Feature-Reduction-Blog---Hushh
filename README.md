@@ -24,7 +24,7 @@ We assume that every input neuron has the same level of information, making the 
 
 ### Simplified Example
 
-Imagine marking the highest two weights for three output neurons to decide which neuron to drop. If output neuron 1 (OT1) receives most information from input neurons 4 and 5, and output neuron 2 (OT2) also heavily relies on input neuron 4, while output neuron 3 (OT3) relies on input neurons 1 and 4, we can infer redundancy. Since OT1's information is already captured by OT2 and OT3, we can drop OT1.
+Imagine marking the highest two weights for three output neurons to decide which neuron to drop. If output neuron 1 (OT1) receives most information from input neurons 4 and 5, and output neuron 2 (OT2) also heavily relies on input neuron 1,4, while output neuron 3 (OT3) relies on input neurons 2 and 5, we can infer redundancy. Since OT1's information is already captured by OT2 and OT3, we can drop OT1.
 
 ![Image3](https://github.com/RohanSidankarHushh/Feature-Reduction-Blog---Hushh/assets/141432736/52187653-1eda-4c57-ac04-d89fc0d43fae)
 
