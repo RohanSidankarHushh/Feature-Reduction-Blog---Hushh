@@ -10,7 +10,7 @@ In this blog, we’ll delve into a feature selection technique for models having
 
 ## Understanding the Method
 
-Our approach focuses on retaining unique information fed to the linear projection layer while dropping features with redundant information. Let’s break down how this works using an example of a projection layer. Here, the input layer takes values from the model's last layer, and the output layer projects these into a specific vector space.
+Our approach focuses on retaining unique information fed through the linear projection layer while dropping features (final features after the projection layer) with redundant information. Let’s break down how this works using an example of a projection layer. Here, the input layer takes values from the model's last layer, and the output layer projects these into a specific vector space.
 
 ![Image1](https://github.com/RohanSidankarHushh/Feature-Reduction-Blog---Hushh/assets/141432736/c8dbb2ca-838a-4b45-9d3a-08e76a4885cd)
 
