@@ -1,4 +1,4 @@
-# Unlocking the Power of Semantic Search: Optimizing Transformer Models with Dimensionality Reduction
+# Unlocking the Power of Semantic Search: Optimizing search with Dimensionality Reduction using Feature Selsction
 
 Semantic search is transforming how we find information, delving deeper into the meaning behind our queries. Unlike traditional text search, semantic search leverages high-dimensional representations created by transformer models, capturing nuanced meanings of texts or images. However, these abstract and complex vectors come at a cost, being resource-intensive and challenging to interpret.
 
