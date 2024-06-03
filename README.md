@@ -49,7 +49,7 @@ model_state_dict = model.state_dict()
 
 ### Setting Parameters:
 
-```
+```python
 # Consider top k (by weights) input features for calculating shared information
 top_k_weights = 512
 # Here we are considering all input features, which means we will be considering every dimension for calculation how many output features shares any input feature
@@ -59,7 +59,7 @@ drop_number = 100
 ```
 
 ### Finding Top-K weights:
-```
+```python
 # Find top-k weight input neurons for each output feature
 high_weight = []
 for i in range(len(model_state_dict["visual.proj"].T)):
@@ -74,7 +74,7 @@ for i in range(len(model_state_dict["visual.proj"].T)):
 
 Now we will create a heatmap of intersections, where `heat_map[i,j]` will give us the intersection between the \(i\)th and \(j\)th output features. Using this heatmap, we will assign an initial dropping score. The dropping score of the \(i\)th feature is the sum of all intersections (common input features) with other output features. The intersection with itself can be skipped as it is not needed.
 
-```
+```python
 # Create a heatmap of intersections between output features
 heat_map = []
 for i in high_weight:
@@ -94,7 +94,7 @@ for i in heat_map:
 ```
 
 ### Dropping Features:
-```
+```python
 drop_index = []
 # loop over the number of features we want to drop
 for drops in range(drop_number):
@@ -110,7 +110,7 @@ for drops in range(drop_number):
 ```
 
 ### Selecting Final Features
-```
+```python
 # In final index consider only the feature having final positive dropping score, there by dropping -1000 scored dropped feature
 final_index = [i for i,values in enumerate(dropping_score) if values>0]
 # Final index are the index of features that we will be the final selected features after dropping features
